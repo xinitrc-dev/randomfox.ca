@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title>randomfox.ca</title>
+    <meta charset="utf-8">
+	<meta type="author" content="xinitrc" />
+	<meta type="description" content="Displaying pictures of random foxes with every click!" />
+	<meta property="og:image" content="http://randomfox.ca/images/20.jpg" />
+	<meta property="og:title" content="randomfox.ca" />
+	<meta property="og:description" content="Random fox on every click!" />
+	<meta property="og:url" content="http://randomfox.ca" />
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="./script/script.js"></script>
+	<script type="text/javascript">
+		$('document').ready(function()
+		{
+			var fox_image = getImage();
+			
+			$("input#shareButton").prop("value", "http://randomfox.ca/" + fox_image);
+			$("p#fox_count").html("Fox Count: " + IMAGE_NUM);
+			$("a#fox_full_link").prop("href", "http://randomfox.ca/" + fox_image);
+			$("img#fox_img_link").prop("src", "http://randomfox.ca/" + fox_image);
+		});
+	</script>
+
+	<style type="text/css">
+		body {
+			margin:0; padding:5px;
+            font-family: arial, verdana, tahoma;
+            font-size:14px;
+		}
+		#sidebar {
+            float:left;
+			width:200px;
+            height:100%;
+            padding:5px;
+			padding-top:250px;
+		}
+		#fox_img_link {
+            float:left;
+			max-width:1024px;
+            margin:10px;
+            border:2px solid #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div id="sidebar">
+		<label><strong>Share this fox!</strong></label>
+		<input type="text" id="shareButton" value="http://randomfox.ca" onclick="javascript:this.select();" /><br />
+
+		<p id="fox_count">Fox Count: 999<br />
+		<a href="https://github.com/xinitrc-ls/randomfox.ca">Add more floof!</a></p>
+
+		<p>temporary API is available: <a href="http://randomfox.ca/api" target="_blank">http://randomfox.ca/api</a></p>
+
+	</div>
+
+	<a href="" id="fox_full_link"><img src="" alt="" title="" id="fox_img_link" /></a>
+</body>
+</html>
