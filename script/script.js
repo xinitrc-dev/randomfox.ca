@@ -1,4 +1,4 @@
-var IMAGE_NUM = 116; /* UPDATE IMAGE COUNT HERE */
+var IMAGE_NUM = 117; /* UPDATE IMAGE COUNT HERE */
 
 function getImage() {
 	var img = "images/";
