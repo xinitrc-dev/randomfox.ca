@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/xinitrc
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://randomfox.ca
+  * I am xinitrc (https://keybase.io/xinitrc) on keybase.
+  * I have a public key with fingerprint 9DE3 F77E 7F86 9607 0DFA  7405 78E3 E73A 59F7 8871
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01014f7e49dbcb23b53f605309c55a37130151efe5b77bf3620ff60c892b3021cdd60a",
+      "fingerprint": "9de3f77e7f8696070dfa740578e3e73a59f78871",
+      "host": "keybase.io",
+      "key_id": "78e3e73a59f78871",
+      "kid": "01014f7e49dbcb23b53f605309c55a37130151efe5b77bf3620ff60c892b3021cdd60a",
+      "uid": "183378c4e31e0b49f89a0e1c7410fe19",
+      "username": "xinitrc"
+    },
+    "service": {
+      "hostname": "randomfox.ca",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1507688444,
+  "expire_in": 157680000,
+  "prev": "9bb1e78b2cd4bbc0285195bc46d9c98f1c9e9870c2cfcd594d654b7faab3ace5",
+  "seqno": 22,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.74
+Comment: https://keybase.io/crypto
+
+yMImAnicrZJbSBVBGMePlWVHDKMXiaBYQXwQndndObN7MIgoIpQuYBdJz2Fndua4
+XnaPu6tpYheJpCgwIo2CKMMehKRSumCFl1LB0sCDWGk+BMWBHrpCoEG7Ym89Ni/D
+fPP7/t//+/ieZ6wMBFM+ZRXvSzz4lZcyPthRFyidO7HYJBBLbxTCTUIVW7pYtc4c
+N1pl6EJYABBAmWMmqzqhRJQIkngIIAmoFCFNwlACEEHGGSIYEy6FRMA9gCqqSCQg
+QqrrIaAJeQI3zBiz47Zhup6sqjOJY8wwV0JqCGCgcw3LAGGFSQxLGlI5VhQMvcQK
+y/EzPHNEc1i+YXkx7xFdsvcP/j/7rluSg4okYYXKTIIMEFnliqoBBimWIeAMqj7o
+MNvUaphHNxim4dpUaM4TvGC9QZk/V7+RZcDWTN2q4VZDPvVrxG3LtahV7f1UuG7c
+CfuZbmPcR48yEl0WiRLD1L0xehn1zHYMyxTC0COpa/iqEAEcUhRZlvME1hA3bBY1
+fAJ5UeAdvw6r94dPCGRYISLVZUIoEBUEVUSoHNJVqiocUpWpCgZUpJzqSJX1EJIJ
+5ppGJI0yJPht1ZqWEBZFz6cW8zQdI2Zqbp3NhOahgbJVgZRgYHXqCn+/AsG1mX+3
+brg3LfBqZ0Gn2317dLRyvm8BlyUjb8tf6olH+7dtTb10L22hMFduDII3s/fj5/b0
+tGycfDH9bTKzBgxFYle7Xt+fbVj/JGFMdT0s3S3azrvxtigajp0yjxf8jhd9dI4m
+0+fR4cmbO7MGj1U/7ev5igyefaNlyhhu67zAvheVf7jLM9Cm7b29I/Odkf5vF7v7
+0xcihbnZ0/nFVu0Z++CK6zN4rqP01rMrRWsmuq8Er7V/2XJgdGbv2cdbk7U/FyfG
+rx/J3zxWcnn2+HuVDiRPtsyvfPC5NZp8mFOBBhp/DI8MleSc/sAHsyfSziee1y70
+D+1KHEprurPuSeXbsdap6R0b2uU/LRRNOw==
+=lwRK
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/xinitrc
+
+==================================================================

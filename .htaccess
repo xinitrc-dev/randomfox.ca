@@ -1,0 +1,9 @@
+Options -Indexes
+ServerSignature Off
+SetEnv SERVER_ADMIN xinitrc@x-hub.co
+ErrorDocument 400 /errorpage.php
+ErrorDocument 401 /errorpage.php
+ErrorDocument 403 /errorpage.php
+ErrorDocument 404 /errorpage.php
+ErrorDocument 500 /errorpage.php
+Header set Content-Security-Policy: upgrade-insecure-requests
