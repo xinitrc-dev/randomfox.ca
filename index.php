@@ -48,12 +48,15 @@ if (isset($_GET['i'])) {
 		#fox_full_link {
 			max-width: calc(100% - 240px);
 			max-height: 100%;
+			background-image: url('http://randomfox.ca/images/<?= $random_fox_index ?>.jpg');
+			background-repeat: no-repeat;
+			background-size: contain;
+			margin: 10px;
 		}
         #fox_img_link {
             float: left;
             margin: 10px;
 			max-width: 100%;
-			height: calc(100% - 24px);
             border: 2px solid #ccc;
         }
     </style>
@@ -75,7 +78,7 @@ if (isset($_GET['i'])) {
 	</div>
 
 	<a href="http://randomfox.ca/?i=<?= $random_fox_index ?>" id="fox_full_link">
-		<img src="http://randomfox.ca/images/<?= $random_fox_index ?>.jpg" alt="" title="" id="fox_img_link" />
+		<img src="http://randomfox.ca/images/<?= $random_fox_index ?>.jpg" alt="" title="" style="visibility: hidden;" id="fox_img_link" />
 	</a>
 </div>
 
