@@ -19,6 +19,7 @@ if (isset($_GET['i'])) {
     <meta type="description" content="Displaying pictures of random foxes with every click!" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#FF6600" />
+	<meta http-equiv="Cache-Control" content="max-age=1" />
 
     <meta property="og:image" content="http://randomfox.ca/images/<?= $random_fox_index ?>.jpg" />
     <meta property="og:title" content="randomfox.ca" />
