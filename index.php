@@ -13,7 +13,7 @@ if (isset($_GET['i'])) {
 
 <html>
 <head>
-    <title>randomfox.ca</title>
+    <title>RandomFox</title>
     <meta charset="utf-8">
     <meta type="author" content="xinitrc" />
     <meta type="description" content="Displaying pictures of random foxes with every click!" />
