@@ -27,7 +27,7 @@ if (isset($_GET['i'])) {
     <meta property="og:url" content="http://randomfox.ca" />
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="./script/script.js"></script>
+    <script type="text/javascript" src="./script/script.js?v=1"></script>
 
     <style type="text/css">
         body {
