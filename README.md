@@ -1,6 +1,17 @@
-To add more foxes:
-1) For the repository
-2) Check for repeates in /images
-3) Upload to /images following the name count and JPG only standard
-4) Edit /script/script.js, updating line 1: "var IMAGE_NUM = NEW_PICTURE_COUNT;"
-5) Create pull request
+# RandomFox
+
+### Contributions welcome!
+
+1. Fork the repository
+2. Add images to `images/` following the naming convention
+3. Create pull request
+
+### Contact
+
+##### Email: [xinitrc@x-hub.co](mailto:xinitrc@x-hub.co)
+
+##### Discord
+
+[<img src="https://discordapp.com/api/guilds/232271167170281472/widget.png?style=banner3">](https://x-bot.co/discord)
+
+or xinitrc#0001
