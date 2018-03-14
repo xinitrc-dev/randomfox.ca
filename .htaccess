@@ -1,6 +1,7 @@
 Options -Indexes
 ServerSignature Off
 SetEnv SERVER_ADMIN xinitrc@x-hub.co
+Redirect 301 /api https://randomfox.ca/floof/
 ErrorDocument 400 /errorpage.php
 ErrorDocument 401 /errorpage.php
 ErrorDocument 403 /errorpage.php

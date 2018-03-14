@@ -1,14 +1,18 @@
 <?php
-$FOX_NUM = (int)file_get_contents('script/script.js', NULL, NULL, 16, 3);
-if (isset($_GET['i'])) {
-    if (ctype_digit($_GET['i'])) {
-        $random_fox_index = $_GET['i'];
-    } else {
+$files = glob('images/*');
+if ($files) {
+    $FOX_NUM = count($files);
+
+    if (!isset($_GET['i'])) {
         $random_fox_index = rand(1, $FOX_NUM);
+    } else if (ctype_digit($_GET['i'])) {
+        $random_fox_index = $_GET['i'];
     }
 } else {
-    $random_fox_index = rand(1, $FOX_NUM);
+    $FOX_NUM = 0;
+    $random_fox_index = 0;
 }
+
 ?>
 
 <html>
@@ -27,14 +31,27 @@ if (isset($_GET['i'])) {
     <meta property="og:url" content="http://randomfox.ca" />
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="./script/script.js?v=1"></script>
+    <script>
+        $(document).ready(function () {
+            var panel_width = document.getElementById('sidebar').offsetWidth;
+            var image_width = document.getElementById('fox_full_link').offsetWidth;
+            document.getElementById('footer').style.width = panel_width + image_width;
+        });
+    </script>
 
     <style type="text/css">
         body {
-            margin:0;
-			padding:5px;
-            font-family: arial, verdana, tahoma;
+            margin: 0;
+			padding: 5px;
+            font-family: arial, verdana, tahoma, sans-serif;
             font-size: 14px;
+        }
+        #footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 75%;
+            text-align: center;
         }
 		#panel {
 			display: flex;
@@ -42,16 +59,14 @@ if (isset($_GET['i'])) {
 			max-height: 100%;
 		}
         #sidebar {
-            float:left;
-            width:200px;
-            padding:5px;
+            float: left;
+            width: 200px;
+            padding: 5px;
         }
 		#fox_full_link {
 			max-width: calc(100% - 240px);
 			max-height: 100%;
-			background-image: url('http://randomfox.ca/images/<?= $random_fox_index ?>.jpg');
-			background-repeat: no-repeat;
-			background-size: contain;
+            background: transparent url('http://randomfox.ca/images/<?= $random_fox_index ?>.jpg') 0 0/contain no-repeat;
 			margin: 10px;
 		}
         #fox_img_link {
@@ -65,8 +80,8 @@ if (isset($_GET['i'])) {
 <body>
 <div id="panel">
 	<div id="sidebar">
-		<label><strong>Share this fox!</strong></label>
-		<input type="text" id="shareButton" value="http://randomfox.ca/?i=<?= $random_fox_index ?>" onclick="javascript:this.select();" /><br />
+		<label for=shareButton><strong>Share this fox!</strong></label>
+		<input type="text" id="shareButton" value="http://randomfox.ca/?i=<?= $random_fox_index ?>" onclick="this.select();" /><br />
 
 		<p id="fox_count">Fox Count: <?= $FOX_NUM ?><br />
 			<a href="https://github.com/xinitrc-ls/randomfox.ca">Add more floof!</a></p>
@@ -81,6 +96,10 @@ if (isset($_GET['i'])) {
 	<a href="http://randomfox.ca/?i=<?= $random_fox_index ?>" id="fox_full_link">
 		<img src="http://randomfox.ca/images/<?= $random_fox_index ?>.jpg" alt="" title="" style="visibility: hidden;" id="fox_img_link" />
 	</a>
+
+    <div id="footer">
+        <p>Made by: xinitrc</p>
+    </div>
 </div>
 
 </body>

@@ -1,6 +1,6 @@
 <?php
 $error = $_SERVER['REDIRECT_STATUS'];
-$referring_url = $_SERVER['HTTP_REFERER'];
+$referring_url = (isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '');
 $requested_url = $_SERVER['REQUEST_URI'];
 # $referring_ip = $_SERVER['REMOTE_ADDR'];
 $server_name = $_SERVER['SERVER_NAME'];
