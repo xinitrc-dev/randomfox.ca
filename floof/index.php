@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-$files = glob('images/*');
+$files = glob('../images/*');
 if ($files) {
     $FOX_NUM = count($files);
     $random_fox_index = rand(1, $FOX_NUM);
