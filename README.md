@@ -8,7 +8,7 @@
 
 ### Contact
 
-##### Email: [xinitrc@x-hub.co](mailto:xinitrc@x-hub.co)
+##### Email: [contact@xinitrc.ca](mailto:contact@xinitrc.ca)
 
 ##### Discord
 
