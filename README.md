@@ -2,9 +2,7 @@
 
 ### Contributions welcome!
 
-1. Fork the repository
-2. Add images to `images/` following the naming convention
-3. Create pull request
+Create a new issue/send an email/contact me on Discord with the list of **links** to the images you want to be added!
 
 ### Contact
 
