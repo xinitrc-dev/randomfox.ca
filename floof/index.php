@@ -12,6 +12,6 @@ if ($files) {
     $image_path = null;
     $link = null;
 }
-$data = ['image' => $image_path, 'link' => $link];
+$data = ['image' => $image_path, 'link' => $link, 'id' => $random_fox_index];
 
 echo json_encode($data);
