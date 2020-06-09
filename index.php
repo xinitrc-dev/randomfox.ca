@@ -25,10 +25,10 @@ if ($files) {
 	<meta name="theme-color" content="#FF6600" />
 	<meta http-equiv="Cache-Control" content="max-age=1" />
 
-    <meta property="og:image" content="http://randomfox.ca/images/<?= $random_fox_index ?>.jpg" />
+    <meta property="og:image" content="https://randomfox.ca/images/<?= $random_fox_index ?>.jpg" />
     <meta property="og:title" content="randomfox.ca" />
     <meta property="og:description" content="Random fox on every click!" />
-    <meta property="og:url" content="http://randomfox.ca" />
+    <meta property="og:url" content="https://randomfox.ca" />
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
     <script>
@@ -66,7 +66,7 @@ if ($files) {
 		#fox_full_link {
 			max-width: calc(100% - 240px);
 			max-height: 100%;
-            background: transparent url('http://randomfox.ca/images/<?= $random_fox_index ?>.jpg') 0 0/contain no-repeat;
+            background: transparent url('https://randomfox.ca/images/<?= $random_fox_index ?>.jpg') 0 0/contain no-repeat;
 			margin: 10px;
 		}
         #fox_img_link {
@@ -81,7 +81,7 @@ if ($files) {
 <div id="panel">
 	<div id="sidebar">
 		<label for=shareButton><strong>Share this fox!</strong></label>
-		<input type="text" id="shareButton" value="http://randomfox.ca/?i=<?= $random_fox_index ?>" onclick="this.select();" /><br />
+		<input type="text" id="shareButton" value="https://randomfox.ca/?i=<?= $random_fox_index ?>" onclick="this.select();" /><br />
 
 		<p id="fox_count">Fox Count: <?= $FOX_NUM ?><br />
 			<a href="https://github.com/xinitrc-ls/randomfox.ca">Add more floof!</a></p>
@@ -89,12 +89,12 @@ if ($files) {
 		<p>Submit more foxes?<br>Here: <a href="https://github.com/xinitrc-ls/randomfox.ca" target="_blank">GitHub</a> or <a href="mailto:x-bot@x-hub.co?subject=Fox%20Pictures%20Upload%20Request">Email</a></p>
 
 		<br /><br /><br />
-		<p>API is Available: <a href="http://randomfox.ca/floof">http://randomfox.ca/floof</a></p>
+		<p>API is Available: <a href="https://randomfox.ca/floof">https://randomfox.ca/floof</a></p>
 
 	</div>
 
-	<a href="http://randomfox.ca/?i=<?= $random_fox_index ?>" id="fox_full_link">
-		<img src="http://randomfox.ca/images/<?= $random_fox_index ?>.jpg" alt="" title="" style="visibility: hidden;" id="fox_img_link" />
+	<a href="https://randomfox.ca/?i=<?= $random_fox_index ?>" id="fox_full_link">
+		<img src="https://randomfox.ca/images/<?= $random_fox_index ?>.jpg" alt="" title="" style="visibility: hidden;" id="fox_img_link" />
 	</a>
 
     <div id="footer">
