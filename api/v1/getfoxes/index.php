@@ -12,8 +12,7 @@ if ($files and isset($_GET['count'])) {
             $foxNums = array();
             $image_paths = array();
             $links = array();
-            for ($x = 0; $x <= $_GET["count"]-1; $x++) {
-                $random_number = rand(1, $FOX_NUM);
+            for ($x = 0; $x < $_GET["count"]; $x++) {
                 do {
                     $random_number = rand(1, $FOX_NUM);
                 } while (in_array( $random_number ,$foxNums ));
