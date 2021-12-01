@@ -1,106 +1,254 @@
-<?php
-$files = glob('images/*');
-if ($files) {
-    $FOX_NUM = count($files);
-
-    if (!isset($_GET['i'])) {
-        $random_fox_index = rand(1, $FOX_NUM);
-    } else if (ctype_digit($_GET['i'])) {
-        $random_fox_index = $_GET['i'];
-    }
-} else {
-    $FOX_NUM = 0;
-    $random_fox_index = 0;
-}
-
-?>
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>RandomFox</title>
-    <meta charset="utf-8">
-    <meta type="author" content="xinitrc" />
-    <meta type="description" content="Displaying pictures of random foxes with every click!" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="theme-color" content="#FF6600" />
-	<meta http-equiv="Cache-Control" content="max-age=1" />
+  
+  <meta charset="utf-8"/>
 
-    <meta property="og:image" content="https://randomfox.ca/images/<?= $random_fox_index ?>.jpg" />
-    <meta property="og:title" content="randomfox.ca" />
-    <meta property="og:description" content="Random fox on every click!" />
-    <meta property="og:url" content="https://randomfox.ca" />
+  <!-- titulo de la empresa -->
+  <title>Clothing Market </title>
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            var panel_width = document.getElementById('sidebar').offsetWidth;
-            var image_width = document.getElementById('fox_full_link').offsetWidth;
-            document.getElementById('footer').style.width = panel_width + image_width;
-        });
-    </script>
+  <!-- inicializaciòn  para medir la referencia de lo ancho de la pantalla y no sea fija -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-    <style type="text/css">
-        body {
-            margin: 0;
-			padding: 5px;
-            font-family: arial, verdana, tahoma, sans-serif;
-            font-size: 14px;
-        }
-        #footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 75%;
-            text-align: center;
-        }
-		#panel {
-			display: flex;
-			align-items: center;
-			max-height: 100%;
-		}
-        #sidebar {
-            float: left;
-            width: 200px;
-            padding: 5px;
-        }
-		#fox_full_link {
-			max-width: calc(100% - 240px);
-			max-height: 100%;
-            background: transparent url('https://randomfox.ca/images/<?= $random_fox_index ?>.jpg') 0 0/contain no-repeat;
-			margin: 10px;
-		}
-        #fox_img_link {
-            float: left;
-            margin: 10px;
-			max-width: 100%;
-            border: 2px solid #ccc;
-        }
-    </style>
 </head>
-<body>
-<div id="panel">
-	<div id="sidebar">
-		<label for=shareButton><strong>Share this fox!</strong></label>
-		<input type="text" id="shareButton" value="https://randomfox.ca/?i=<?= $random_fox_index ?>" onclick="this.select();" /><br />
 
-		<p id="fox_count">Fox Count: <?= $FOX_NUM ?><br />
-			<a href="https://github.com/xinitrc-ls/randomfox.ca">Add more floof!</a></p>
+<body data-spy="scroll" data-offset="80">
 
-		<p>Submit more foxes?<br>Here: <a href="https://github.com/xinitrc-ls/randomfox.ca" target="_blank">GitHub</a> or <a href="mailto:x-bot@x-hub.co?subject=Fox%20Pictures%20Upload%20Request">Email</a></p>
-
-		<br /><br /><br />
-		<p>API is Available: <a href="https://randomfox.ca/floof">https://randomfox.ca/floof</a></p>
-
-	</div>
-
-	<a href="https://randomfox.ca/?i=<?= $random_fox_index ?>" id="fox_full_link">
-		<img src="https://randomfox.ca/images/<?= $random_fox_index ?>.jpg" alt="" title="" style="visibility: hidden;" id="fox_img_link" />
-	</a>
-
-    <div id="footer">
-        <p>Made by: xinitrc</p>
+  <!--  carpeta imagen Preloader -->
+  <div class="animationload"> <!--animacion de carga -->
+    <div class="loader">
+        Cargando....
     </div>
-</div>
+  </div> 
+  <!-- fin de cuando cargue  Preloader -->
 
-</body>
+
+  <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <div class="container"> <!--contenedores -->
+      <!-- marca y se alterna para mejor visualizacion de el movil creacion de el boton para que se añada a el momento de hacer pequeña la pantalla  -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Navegacion </span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">clothing Market</a> <!--barra de navegacion -->
+      </div>
+
+      <!-- lista de navegacion de nuestro usuario por la primera pagina -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#home">Principal</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#twitter_tweet">Comentarios</a></li>
+          <li><a href="#contact">Contáctanos</a></li>
+          <li><a href="24-news/blog.html">Productos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav> 
+
+    <!-- Menu Principal  -->
+    <section class="main-home" id="home">
+      <div class="home-page-photo"></div>
+      <div class="home__header-content">
+        <div id="main-home-carousel" class="owl-carousel"> <!--efecto de el carrusel -->
+          <div>
+            <h1 class="intro-title">Comienza a crear tu propio estilo</h1>
+            <p class="intro-text">Te damos la bienvenida a clothing Market  <br/>conocenos y conoce que estilo es mejor para ti </p>
+            <a class="btn btn-custom" href="#">Siguiente </a>
+          </div>
+
+          <div>
+            <h1 class="intro-title">Vistete con nosotros</h1>
+            <p class="intro-text">Podemos tener descuentos  <br/>preparate.</p>
+            <a class="btn btn-custom" href="#">Siguiente </a>
+          </div>
+
+          <div>
+            <h1 class="intro-title">Somos expertos en recomendarte el mejor estilo</h1>
+            <p class="intro-text">Atrevete <br/> Disfruta </p>
+            <a class="btn btn-custom" href="#">Vamos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--fin de la pagina principal  -->
+
+    <!-- SERVICIOS -->
+    <section id="services"> 
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="title text-center">Servicios.</h3>
+            <div class="titleHR"><span></span></div>
+          </div>
+        </div>
+        <!--ideas creativas apartado  -->
+        <div class="row">
+          <div class="col-sm-4"> 
+            <div class="text-center services-item">
+              <div class="col-wrapper">
+                <div class="icon-border"> 
+                  <i class="icon-design-graphic-tabletine-tablet color-l-orange"></i><!--probando los iconos pedir opinion -->
+                </div>
+                <h5>Crea tus propias ideas de estilo </h5>
+                <p>Con Clothing Market</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4"> <!-- apartado 3  -->
+            <div class="text-center services-item">
+              <div class="col-wrapper">
+                <div class="icon-border"> 
+                  <i class="icon-design-pencil-rule-streamline color-l-blue"></i> 
+                </div>
+                <h5>No sabes que ponerte?</h5>
+                <p> Nosotros tenemos la solucion</p>
+              </div>
+            </div>
+          </div><!--aca se lo quite -->
+
+          <div class="col-sm-4"> <!-- Service-item -->
+            <div class="text-center services-item">
+              <div class="col-wrapper">
+                <div class="icon-border"> 
+                  <i class="icon-caddie-shopping-streamline color-l-green"></i> 
+                </div>
+                <h5>Compra no te vas a arrepentir </h5>
+                <p>Ya viste todas las prendas que tenemos?</p>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div> 
+    </section>
+    <!--fin de apartados -->
+
+
+    <!-- Contactanos-->
+    <section class="twitter_tweet parallax" id="twitter_tweet" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <div id="testi-carousel" class="owl-carousel owl-spaced">
+              <div>
+                <i class="fa fa-twitter"></i>
+                <p>- Pao Vazquez </p>
+              </div><!--fin de primera ventana -->
+              <div>
+                <i class="fa fa-twitter"></i>
+                <p>- Pao Vazquez</p>
+              </div><!-- fin de la primera ventana -->
+              <div>
+                <i class="fa fa-twitter"></i>
+                <p>- Pao Vazquez </p>
+              </div>
+            </div>
+          </div> <!-- fin col-md-8 -->
+        </div> <!-- fin row -->
+      </div> <!-- container -->
+    </section>
+    <!-- final de seccion -->
+
+    <!-- Menu Contactanos que mas le agregamos ????? -->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="title text-center">Contactanos </h3>
+            <div class="titleHR"><span></span></div>
+    <!-- fin de este apartado  -->
+
+    <!-- REDES  -->
+    <footer id="footer">    
+      <div class="footer-widgets-wrap">
+        <div class="container text-center">    
+          <div class="row">
+            <div class="col-sm-4 col-md-4">
+              <div class="footer-content">
+                <h4>REDES SOCIALES </h4>
+                <div class="footer-socials">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+  
+                </div>
+              </div> <!-- FIN footer-content -->
+            </div> <!-- FIN col-sm-4 -->
+            <div class="col-sm-4 col-md-4">
+              <div class="footer-content">
+                <h4>Encargados  </h4>
+                <p>Kevin Santiago Ochoa <br>
+                Blanca Paola Corona Vàzquez </p>
+                <p>Yael Batalla Jimenez <br>
+                <a href="#">Jose Luis Murillo Martinez </a><br>
+                </p>
+              </div> <!-- fin footer-content -->
+            </div> <!--  fin col-sm-4 -->
+            <div class="col-sm-4 col-md-4">
+              <div class="footer-content">
+
+                
+                
+              </div>  <!-- fin footer-content -->   
+            </div> <!-- fin  col-sm-4 -->
+          </div> <!-- fin row -->
+        </div> <!-- container -->
+      </div>
+      <div class="footer-bottom text-center"> <!-- Footer-copyright -->
+        <p>Clothing Market </p>
+      </div>
+    </footer>
+    <!-- pie de pagina  -->
+
+<!-- fuentes de CSS -->
+<link href='http://fonts.googleapis.com/css?family=Signika+Negative:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Kameron:400,700' rel='stylesheet' type='text/css'>
+
+<!-- archivos de estilo -->
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<!-- Fonts-style -->
+<link rel="stylesheet" href="css/styles.css"/>
+<!-- Fonts-style -->
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<!-- Modal-Effect -->
+<link href="css/component.css" rel="stylesheet">
+<!-- owl-carousel -->
+<link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="screen">
+<link href="css/owl.theme.css" rel="stylesheet" type="text/css" media="screen">
+<!-- Template Styles-->
+<link rel="stylesheet" href="css/style.css"/>
+<!-- Template Color-->
+<link rel="stylesheet" type="text/css" href="css/green.css" media="screen" id="color-opt" />
+   
+
+    <!-- Java aca le corte el codigo -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jquery easing -->
+    <script src="js/jquery.easing.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script> <!--yael -->
+    <!-- modal-effect -->
+    <script src="js/classie.js"></script>
+    <script src="js/modalEffects.js"></script>
+    <!-- Counter-up -->
+    <script src="js/waypoints.min.js" type="text/javascript"></script> <!--luis -->
+    <script src="js/jquery.counterup.min.js" type="text/javascript"></script>
+    <!-- SmoothScroll -->
+    <script src="js/SmoothScroll.js"></script>
+    <!-- Parallax -->
+    <script src="js/jquery.stellar.min.js"></script>
+    <!-- Jquery-Nav -->
+    <script src="js/jquery.nav.js"></script> <!--santiago -->
+    <!-- Owl carousel -->                                                      
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script> <!--yopo -->
+    <!-- App JS -->
+    <script src="js/app.js"></script>
+
+    <!-- Switcher  -->
+   <script type="text/javascript" src="js/switcher.js"></script>
+
+
+  </body>
 </html>
