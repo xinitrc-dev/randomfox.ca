@@ -17,7 +17,7 @@ if ($files) {
 
 <html>
 <head>
-    <title>RandomFox</title>
+    <title>Mi primera pagina </title>
     <meta charset="utf-8">
     <meta type="author" content="xinitrc" />
     <meta type="description" content="Displaying pictures of random foxes with every click!" />
